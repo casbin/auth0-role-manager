@@ -1,0 +1,4 @@
+p, Group1, data1, read
+p, alice@test.com, data2, write
+p, Admin, data2, read
+p, Admin, data2, write
