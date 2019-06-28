@@ -20,7 +20,7 @@ import (
 
 	"github.com/casbin/casbin/log"
 	"github.com/casbin/casbin/rbac"
-	"github.com/zenoss/go-auth0/auth0"
+	"github.com/casbin/go-auth0/auth0"
 )
 
 type RoleManager struct {
