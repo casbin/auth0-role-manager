@@ -54,7 +54,10 @@ func NewRoleManager(clientID string, clientSecret string, tenant string, apiEndp
 	rm.nameToIDMap = map[string]string{}
 	rm.idToNameMap = map[string]string{}
 
-	rm.initialize()
+	err := rm.initialize()
+	if err != nil {
+		panic(err)
+	}
 	rm.loadMapping()
 
 	return &rm
