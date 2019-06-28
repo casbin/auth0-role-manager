@@ -18,8 +18,8 @@ import (
 	"errors"
 	"fmt"
 
+	"github.com/casbin/casbin/log"
 	"github.com/casbin/casbin/rbac"
-	"github.com/casbin/casbin/util"
 	"github.com/zenoss/go-auth0/auth0"
 )
 
@@ -84,20 +84,20 @@ func (rm *RoleManager) initialize() error {
 }
 
 func (rm *RoleManager) loadMapping() {
-	util.LogPrintf("Loading (ID, name) mapping for users:")
+	log.LogPrintf("Loading (ID, name) mapping for users:")
 	users, _ := rm.mgmtClient.Mgmt.Users.GetAll()
 	for _, user := range users {
 		rm.nameToIDMap[user.Email] = user.ID
 		rm.idToNameMap[user.ID] = user.Email
-		util.LogPrintf("%s -> %s", user.ID, user.Email)
+		log.LogPrintf("%s -> %s", user.ID, user.Email)
 	}
 
-	util.LogPrintf("Loading (ID, name) mapping for groups:")
+	log.LogPrintf("Loading (ID, name) mapping for groups:")
 	groups, _ := rm.authzClient.Authz.Groups.GetAll()
 	for _, group := range groups {
 		rm.nameToIDMap[group.Name] = group.ID
 		rm.idToNameMap[group.ID] = group.Name
-		util.LogPrintf("%s -> %s", group.ID, group.Name)
+		log.LogPrintf("%s -> %s", group.ID, group.Name)
 	}
 }
 
