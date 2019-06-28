@@ -16,15 +16,11 @@ package auth0rolemanager
 
 import (
 	"errors"
+	"fmt"
 
 	"github.com/casbin/casbin/rbac"
 	"github.com/casbin/casbin/util"
-	//"strings"
-	//"net/http"
-	//"io/ioutil"
-	//"fmt"
 	"github.com/zenoss/go-auth0/auth0"
-	"fmt"
 )
 
 type RoleManager struct {
