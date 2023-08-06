@@ -1,4 +1,4 @@
-Auth0 Role Manager [![Build Status](https://travis-ci.org/casbin/auth0-role-manager.svg?branch=master)](https://travis-ci.org/casbin/auth0-role-manager) [![Coverage Status](https://coveralls.io/repos/github/casbin/auth0-role-manager/badge.svg?branch=master)](https://coveralls.io/github/casbin/auth0-role-manager?branch=master) [![Godoc](https://godoc.org/github.com/casbin/auth0-role-manager?status.svg)](https://godoc.org/github.com/casbin/auth0-role-manager)
+Auth0 Role Manager [![Coverage Status](https://coveralls.io/repos/github/casbin/auth0-role-manager/badge.svg?branch=master)](https://coveralls.io/github/casbin/auth0-role-manager?branch=master) [![Godoc](https://godoc.org/github.com/casbin/auth0-role-manager?status.svg)](https://godoc.org/github.com/casbin/auth0-role-manager)
 ====
 
 Auth0 Role Manager is the [Auth0](https://auth0.com/) role manager for [Casbin](https://github.com/casbin/casbin). With this library, Casbin can load role hierarchy (user-role mapping) from [Auth0 Authorization Extension](https://auth0.com/docs/extensions/authorization-extension/v2) or save role hierarchy to it (NOT Implemented).
